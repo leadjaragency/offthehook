@@ -100,29 +100,33 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* HERO */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-navy overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, #2A7B88 0%, transparent 50%),
-                              radial-gradient(circle at 80% 20%, #D4952A 0%, transparent 40%)`,
-          }}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/images/hero.png"
+          alt="Off the Hook food spread"
+          fill
+          priority
+          className="object-cover object-center"
         />
+        {/* Dark overlays for text legibility */}
+        <div className="absolute inset-0 bg-navy/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/30" />
+
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
-            <motion.div variants={fadeUp} className="flex justify-center mb-6">
-              <div className="w-16 h-0.5 bg-gold/60 mx-auto" />
+            <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-12 h-0.5 bg-gold/60" />
+              <span className="text-gold text-xs uppercase tracking-[0.3em] font-sans">From Sea to Land</span>
+              <div className="w-12 h-0.5 bg-gold/60" />
             </motion.div>
-            <motion.h1 variants={fadeUp} className="text-white text-5xl sm:text-7xl font-bold mb-3 leading-tight">
+            <motion.h1 variants={fadeUp} className="text-white text-5xl sm:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">
               Off the Hook
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-gold text-sm uppercase tracking-[0.3em] mb-3 font-sans">
-              From Sea to Land
-            </motion.p>
-            <motion.p variants={fadeUp} className="text-white/70 text-lg sm:text-xl mb-4 font-sans max-w-2xl mx-auto">
+            <motion.p variants={fadeUp} className="text-white/80 text-lg sm:text-xl mb-4 font-sans max-w-2xl mx-auto drop-shadow">
               Newfoundland-Inspired Seafood in Calgary
             </motion.p>
-            <motion.p variants={fadeUp} className="text-white/50 text-sm mb-10 font-sans flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
+            <motion.p variants={fadeUp} className="text-white/60 text-sm mb-10 font-sans flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
               <span className="flex items-center gap-1">
                 <MapPin className="inline w-4 h-4 text-gold" />
                 {businessInfo.fullAddress}
@@ -135,12 +139,12 @@ export default function HomePage() {
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 justify-center">
               <Link href="/menu">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white font-sans">
+                <Button size="lg" className="bg-white text-navy hover:bg-white/90 font-bold font-sans shadow-lg">
                   View Menu
                 </Button>
               </Link>
               <Link href="/order">
-                <Button size="lg" className="bg-gold hover:bg-gold/90 text-navy font-bold font-sans">
+                <Button size="lg" className="bg-gold hover:bg-gold/90 text-navy font-bold font-sans shadow-lg">
                   Order Online
                 </Button>
               </Link>
