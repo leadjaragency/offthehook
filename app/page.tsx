@@ -112,7 +112,7 @@ export default function HomePage() {
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="flex justify-center mb-6">
               <Image
-                src="/images/Good Cheers.png"
+                src="/images/logo.png"
                 alt="Off the Hook"
                 width={160}
                 height={160}

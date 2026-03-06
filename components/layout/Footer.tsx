@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/images/Good Cheers.png"
+                src="/images/logo.png"
                 alt="Off the Hook logo"
                 width={56}
                 height={56}

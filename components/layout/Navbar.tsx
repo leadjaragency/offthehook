@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/Good Cheers.png"
+              src="/images/logo.png"
               alt="Off the Hook logo"
               width={48}
               height={48}
@@ -99,7 +99,7 @@ export default function Navbar() {
                 <div className="flex flex-col h-full pt-6">
                   <div className="mb-8 flex items-center gap-3">
                     <Image
-                      src="/images/Good Cheers.png"
+                      src="/images/logo.png"
                       alt="Off the Hook logo"
                       width={56}
                       height={56}

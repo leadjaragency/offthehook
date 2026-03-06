@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Off the Hook — From Sea to Land",
     type: "website",
-    images: [{ url: "/images/Good Cheers.png" }],
+    images: [{ url: "/images/logo.png" }],
   },
 };
 
