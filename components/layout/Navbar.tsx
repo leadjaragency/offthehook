@@ -32,9 +32,9 @@ export default function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Off the Hook logo"
-              width={48}
-              height={48}
-              className="rounded-full object-cover"
+              width={52}
+              height={52}
+              className="object-contain drop-shadow-md"
             />
             <div className="flex flex-col leading-tight">
               <span className="text-gold font-serif text-lg font-bold tracking-wide">

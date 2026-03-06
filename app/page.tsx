@@ -111,14 +111,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="flex justify-center mb-6">
-              <Image
-                src="/images/logo.png"
-                alt="Off the Hook"
-                width={160}
-                height={160}
-                className="rounded-full object-cover shadow-2xl border-4 border-gold/30"
-                priority
-              />
+              <div className="w-16 h-0.5 bg-gold/60 mx-auto" />
             </motion.div>
             <motion.h1 variants={fadeUp} className="text-white text-5xl sm:text-7xl font-bold mb-3 leading-tight">
               Off the Hook
