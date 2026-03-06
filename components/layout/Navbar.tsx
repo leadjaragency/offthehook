@@ -103,7 +103,7 @@ export default function Navbar() {
                       alt="Off the Hook logo"
                       width={56}
                       height={56}
-                      className="rounded-full object-cover"
+                      className="object-contain drop-shadow-md"
                     />
                     <div>
                       <span className="text-gold font-serif text-xl font-bold block">Off the Hook</span>

@@ -16,7 +16,7 @@ export default function Footer() {
                 alt="Off the Hook logo"
                 width={56}
                 height={56}
-                className="rounded-full object-cover"
+                className="object-contain drop-shadow-md"
               />
               <div>
                 <h3 className="text-gold font-serif text-xl font-bold leading-tight">Off the Hook</h3>
