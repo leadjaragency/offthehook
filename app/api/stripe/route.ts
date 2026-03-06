@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const stripe = new Stripe(stripeKey, { apiVersion: "2026-02-25.clover" });
-    const { items, form, total } = await req.json();
+    const { items, form } = await req.json();
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
     const session = await stripe.checkout.sessions.create({

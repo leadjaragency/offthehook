@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,6 @@ import { Suspense } from "react";
 
 function ConfirmationContent() {
   const params = useSearchParams();
-  const router = useRouter();
   const orderNumber = params.get("order") ?? "OTH-000000";
 
   return (

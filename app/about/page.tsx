@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Fish, Heart, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "About Us",
