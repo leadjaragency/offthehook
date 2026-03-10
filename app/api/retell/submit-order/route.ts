@@ -7,9 +7,14 @@ function generateOrderNumber(): string {
 
 export async function POST(req: NextRequest) {
   try {
-    const { customer_name, customer_phone, items, pickup_time, special_instructions } = await req.json();
+    const body = await req.json();
+    const customer_name = body.customer_name;
+    const customer_phone = body.customer_phone;
+    const order_items = body.order_items ?? body.items; // support both field names
+    const pickup_time = body.pickup_time;
+    const special_instructions = body.special_instructions;
 
-    if (!customer_name || !customer_phone || !items) {
+    if (!customer_name || !customer_phone || !order_items) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -27,7 +32,7 @@ export async function POST(req: NextRequest) {
         customer_name,
         customer_phone,
         customer_email: null,
-        items: [{ name: items, quantity: 1, price: 0 }],
+        items: [{ name: order_items, quantity: 1, price: 0 }],
         subtotal: 0,
         tax: 0,
         total: 0,
@@ -61,7 +66,7 @@ export async function POST(req: NextRequest) {
             <p><strong>Customer:</strong> ${customer_name}</p>
             <p><strong>Phone:</strong> ${customer_phone}</p>
             <p><strong>Pickup Time:</strong> ${pickup_time}</p>
-            <p><strong>Items:</strong><br/>${items}</p>
+            <p><strong>Items:</strong><br/>${order_items}</p>
             ${special_instructions ? `<p><strong>Special Instructions:</strong> ${special_instructions}</p>` : ""}
             <p><em>Order placed via voice agent</em></p>
           `,
